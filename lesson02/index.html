@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lesson02 what is JSX?</title>
+    </head>
+    <body>
+        <h1 style="color:red;">用戶已登入</h1>
+        <div id="app"></div>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script type="text/babel">
+            function getAppname(){
+             return "React"+123
+            }
+            function hello(){
+                const isLogin = true;
+                if (isLogin == true){
+                    return <a href="https://code.visualstudio.com/docs/languages/cpp">Hello, {getAppname()}</a>
+                }
+                else{
+                    return <a href="https://medium.com/gdplabs/build-and-debug-c-on-visual-studio-code-for-mac-77e05537105e">Hello, {getAppname()}</a>
+
+                }
+            }
+            let appContainer = document.getElementById("app");
+            ReactDOM.render(
+                <h1 style={{color='blue'}}>用戶已登入</h1>,
+                appContainer
+            )
+        </script>
+    </body>
+</html>
